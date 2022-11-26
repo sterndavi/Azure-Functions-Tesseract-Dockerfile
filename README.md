@@ -1,3 +1,5 @@
+# Usando Tesseract OCR com Azure Functions
+
 Trabalhar com PDF quase nunca é tão simples quando deveria ser. Toda vez que alguém aparece com um problema que envolve coletar dados de arquivos em PDF uma pequena fada cai morta em algum lugar.
 
 O sofrimento não é com PDFs gerados digitalmente, para esses existem inúmeras soluções muito mais simples do que a tratada nesse texto. Porém quando precisamos consumir arquivos escaneados ou fotos transformadas em PDF, usar alguma tecnologia de OCR se torna uma ideia cada vez mais tentadora.
