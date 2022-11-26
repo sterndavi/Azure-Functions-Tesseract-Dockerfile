@@ -8,9 +8,9 @@ Apesar de ser barato e simples, o serviço padrão muitas vezes deixa a desejar 
 
 Pensando em ampliar a funcionalidade do Azure Functions, construí uma imagem adicionando suporte ao Tesseract OCR e Poppler para permitir a transformação e leitura de fotos ou PDFs.
 
-##Construindo a imagem
+## Construindo a imagem
 
-###Clonando repositório
+### Clonando repositório
 
 No repositório abaixo esta tudo que é necessário para transformar um pdf em imagem e fazer a leitura do texto com OCR.
 ```
@@ -34,7 +34,7 @@ C:.
 ```
 Com exceção do Dockerfile, todos os arquivos do repositório são idênticos ao padrão que são criados quando inicializamos um Function App pelo VS Code.
 
-###Dockerfile
+### Dockerfile
 
 Agora finalmente vamos à estrela do nosso projeto, o arquivo de definição do ambiente.
 
@@ -63,7 +63,7 @@ RUN cd /home/site/wwwroot && \
 
 Nesta imagem temos tudo que é necessário para transformar um pdf em texto usando OCR. Vale ressaltar que para situações mais desafiadoras, o ImageMagick seria uma ótima adição.
 
-###Código de exemplo
+### Código de exemplo
 
 Para testar a funcionalidade, preparei no repositório uma pequena função que serve como proof of concept.
 
@@ -107,20 +107,20 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     )
 ```
 
-##Implementação
-###Pré-requisitos locais
+## Implementação
+### Pré-requisitos locais
 
    - Docker Desktop (docs);
    - Azure CLI (docs, ou ‘winget install “Azure CLI” ’ no Powershell);
    - Algum editor de texto.
 
-###Pré-requisitos Azure
+### Pré-requisitos Azure
 
    - Azure Container Registry (É possível dar deploy pelo Github e pelo Docker Hub também);
    - Function App (Configurado para docker e utilizando algum app service plan);
    - Azure Storage Account (Obrigatório para criação do Function app).
 
-###Executando a implementação
+### Executando a implementação
 
 Para colocarmos nossa imagem dentro do Function App precisamos primeiro colocar a imagem no Container Registry.
 
