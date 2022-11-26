@@ -1,10 +1,6 @@
 import logging
-
 import azure.functions as func
-from datetime import datetime
-import os
 import pytesseract as pt
-import io
 import requests
 import tempfile
 import pdf2image as p2i
